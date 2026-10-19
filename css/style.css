@@ -1,0 +1,92 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* Main application container */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.container > p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Form */
+#taskForm {
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    width: 70%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+#taskInput:focus {
+    outline: none;
+    border-color: #0078d4;
+}
+
+/* Add button */
+button {
+    padding: 12px 18px;
+    font-size: 16px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005ea6;
+}
+
+/* Error message */
+#errorMessage {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* Used when input is invalid */
+#taskInput.invalid {
+    border-color: #d32f2f;
+    background-color: #fff5f5;
+}
+
+/* Task list */
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+/* Individual task */
+#taskList li {
+    background-color: #f8f9fa;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
