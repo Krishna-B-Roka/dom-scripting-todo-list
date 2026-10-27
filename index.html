@@ -1,42 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow - To-Do List</title>
+
+    <title>My To-do List</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <main class="todo-container">
 
-        <h1>TaskFlow</h1>
-        <p>Organize your tasks easily</p>
+        <header>
+            <h1>My To-do List</h1>
+            <p>Add tasks, mark them as completed, or remove them.</p>
+        </header>
 
-        <form id="taskForm">
+        <form id="todoForm" novalidate>
+            <label for="taskInput">New task</label>
 
-            <input
-                type="text"
-                id="taskInput"
-                placeholder="Enter a task"
-            >
+            <div class="input-group">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter a task"
+                    autocomplete="off"
+                >
 
-            <button type="submit">Add Task</button>
+                <button type="submit">Add task</button>
+            </div>
 
-            <p id="errorMessage"></p>
-
+            <p id="errorMessage" class="error-message"></p>
         </form>
 
-        <h2>My Tasks</h2>
+        <section class="task-information">
+            <p>
+                Open tasks:
+                <span id="taskCounter">0</span>
+            </p>
+        </section>
+
+        <section class="filter-buttons" aria-label="Task filters">
+            <button type="button" class="filter active-filter" data-filter="all">
+                All
+            </button>
+
+            <button type="button" class="filter" data-filter="active">
+                Active
+            </button>
+
+            <button type="button" class="filter" data-filter="completed">
+                Completed
+            </button>
+        </section>
+
+        <p id="emptyMessage" class="empty-message">
+            No tasks yet. Add your first task!
+        </p>
 
         <ul id="taskList"></ul>
 
-    </div>
+        <button type="button" id="clearCompleted" class="clear-button">
+            Clear completed tasks
+        </button>
+
+    </main>
 
     <script src="js/script.js"></script>
-
 </body>
 </html>
